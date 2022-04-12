@@ -34,6 +34,15 @@ else     #如果TARGET_BUILD_APPS 等于 空
 all_product_configs := $(get-all-product-makefiles)    # get-all-product-makefiles 在 build/core/product.mk 里面定义
 endif
 =============================================================
+>>>product.mk文件<<<<
+# Functions for including AndroidProducts.mk files  #包含AndroidProduct.mk文件的函数
+# PRODUCT_MAKEFILES is set up in AndroidProducts.mks. #PRODUCT_MAKEFILES在AndroidProducts.mk文件里面安装
+# Format of PRODUCT_MAKEFILES:  # PRODUCT_MAKEFILES的格式
+# <product_name>:<path_to_the_product_makefile>   #a:b型
+# If the <product_name> is the same as the base file name (without dir  # 如果a与product makefile的基本文件名（没有目录和.mk后缀）相同，
+# and the .mk suffix) of the product makefile, "<product_name>:" can be  # "a:"可以忽略
+# omitted.
+
 #
 # Returns the list of all AndroidProducts.mk files.  #返回所有AndroidProducts.mk文件的列表
 # $(call ) isn't necessary.
